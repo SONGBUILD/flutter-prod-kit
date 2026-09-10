@@ -9,6 +9,8 @@ lib/features/ one sample feature (home)
 
 Copy `lib/` into a real `flutter create` app when you have the SDK. This repo stays readable on GitHub without shipping 200 generated files.
 
+Home feature calls `ApiClient.ping` through `Result.retry`.
+
 ## Flavor
 
 Use `--dart-define=ENV=dev|prod` and read `AppEnv.current`.
