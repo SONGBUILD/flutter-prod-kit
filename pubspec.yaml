@@ -1,0 +1,6 @@
+name: flutter_prod_kit
+description: Small layered Flutter starter (core + features).
+publish_to: "none"
+version: 0.1.0
+environment:
+  sdk: ">=3.3.0 <4.0.0"
