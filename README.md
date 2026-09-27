@@ -1,19 +1,21 @@
 # flutter-prod-kit
 
-A **small Flutter layout**, not a kitchen-sink template.
+A small Flutter layout you can copy into an app you already created. It is not a full `flutter create` project, so the repository stays readable and does not carry generated platform folders.
 
 ```
-lib/core/     result type, http client hook
-lib/features/ one sample feature (home)
+lib/core/      Result type and a thin HTTP hook
+lib/features/  one home feature
+example/       a minimal entrypoint
 ```
 
-Copy `lib/` into a real `flutter create` app when you have the SDK. This repo stays readable on GitHub without shipping 200 generated files.
+```bash
+flutter create my_app
+cp -R lib example/lib my_app/
+```
 
-Home feature calls `ApiClient.ping` through `Result.retry`.
+The home feature calls `ApiClient.ping` through `Result.retry`. Pass the environment with `--dart-define=ENV=dev|prod` and read `AppEnv.current`.
 
-## Flavor
-
-Use `--dart-define=ENV=dev|prod` and read `AppEnv.current`.
+Hire / demos: [heysony.com](https://heysony.com)
 
 ## License
 
