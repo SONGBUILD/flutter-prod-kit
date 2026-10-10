@@ -15,6 +15,8 @@ cp -R lib example/lib my_app/
 
 The home feature calls `ApiClient.ping` through `Result.retry`. Pass the environment with `--dart-define=ENV=dev|prod` and read `AppEnv.current`.
 
+`Result` keeps the failure next to the value, instead of throwing on the path a screen can handle. One feature lives in one folder. `ENV` is chosen at build time, not with a second codebase.
+
 Hire / demos: [heysony.com](https://heysony.com)
 
 ## License
